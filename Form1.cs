@@ -30,7 +30,7 @@ namespace is_takip_proje
             frm2.MdiParent = this;
             frm2.Show();
         }
-        
+
         private void BtnPersonelIstatistik_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
@@ -38,12 +38,36 @@ namespace is_takip_proje
             frm3.MdiParent = this;
             frm3.Show();
         }
-
+        Formlar.FrmGorevListesi frm4;
         private void BtnGorevListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Formlar.FrmGorevListesi frm4 = new Formlar.FrmGorevListesi();
+            if (frm4 == null || frm4.IsDisposed)  { 
+                frm4 = new Formlar.FrmGorevListesi();
             frm4.MdiParent = this;
             frm4.Show();
+            }
+        }
+
+        private void BtnGorevTanimla_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.FrmGorev fr = new Formlar.FrmGorev();
+            fr.Show();
+        }
+
+        private void BtnGorevDetay_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.FrmGorevDetay fr = new Formlar.FrmGorevDetay();
+            fr.Show();
+        }
+        Formlar.FrmAnaForm frm5;
+        private void BtnAnaForm_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frm5 == null || frm5.IsDisposed)
+            {
+                frm5 = new Formlar.FrmAnaForm();
+                frm5.MdiParent = this;
+                frm5.Show();
+            }
         }
     }
 }
