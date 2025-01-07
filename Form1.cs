@@ -69,5 +69,32 @@ namespace is_takip_proje
                 frm5.Show();
             }
         }
+        Formlar.FrmAktifCagrilar fr;
+        private void btnAktifCagrılar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            if ( fr == null || fr.IsDisposed)
+            {
+                fr = new Formlar.FrmAktifCagrilar();
+                fr.MdiParent = this;
+                fr.Show();
+            }
+        }
+        Formlar.FrmPasifCagrilar frm6;
+        private void btnPasifCagrılar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frm6 == null || frm6.IsDisposed)
+            {
+                frm6 = new Formlar.FrmPasifCagrilar();
+                frm6.MdiParent = this;
+                frm6.Show();
+            }
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

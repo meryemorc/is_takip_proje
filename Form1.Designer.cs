@@ -58,6 +58,8 @@
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAktifCagrılar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPasifCagrılar = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -73,6 +75,8 @@
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.Çağrılar = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -115,10 +119,12 @@
             this.barButtonItem24,
             this.barButtonItem25,
             this.barButtonItem26,
-            this.barButtonItem27});
+            this.barButtonItem27,
+            this.btnAktifCagrılar,
+            this.btnPasifCagrılar});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.ribbonControl1.MaxItemId = 29;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(6);
+            this.ribbonControl1.MaxItemId = 31;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 644;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -127,6 +133,7 @@
             this.ribbonPage3,
             this.ribbonPage4,
             this.ribbonPage5,
+            this.Çağrılar,
             this.ribbonPage6,
             this.ribbonPage7});
             this.ribbonControl1.Size = new System.Drawing.Size(982, 183);
@@ -135,7 +142,7 @@
             // 
             this.BtnAnaForm.Caption = "Ana Sayfa";
             this.BtnAnaForm.Id = 1;
-            this.BtnAnaForm.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.BtnAnaForm.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnAnaForm.ImageOptions.LargeImage")));
             this.BtnAnaForm.Name = "BtnAnaForm";
             this.BtnAnaForm.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnAnaForm_ItemClick);
             // 
@@ -326,6 +333,22 @@
             this.barButtonItem27.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem27.ImageOptions.LargeImage")));
             this.barButtonItem27.Name = "barButtonItem27";
             // 
+            // btnAktifCagrılar
+            // 
+            this.btnAktifCagrılar.Caption = "Aktif Çağrılar";
+            this.btnAktifCagrılar.Id = 29;
+            this.btnAktifCagrılar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAktifCagrılar.ImageOptions.LargeImage")));
+            this.btnAktifCagrılar.Name = "btnAktifCagrılar";
+            this.btnAktifCagrılar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAktifCagrılar_ItemClick);
+            // 
+            // btnPasifCagrılar
+            // 
+            this.btnPasifCagrılar.Caption = "Pasif Çağrılar";
+            this.btnPasifCagrılar.Id = 30;
+            this.btnPasifCagrılar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPasifCagrılar.ImageOptions.LargeImage")));
+            this.btnPasifCagrılar.Name = "btnPasifCagrılar";
+            this.btnPasifCagrılar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPasifCagrılar_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -423,6 +446,19 @@
             this.ribbonPageGroup10.ItemLinks.Add(this.BtnGorevDetay);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             // 
+            // Çağrılar
+            // 
+            this.Çağrılar.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup14});
+            this.Çağrılar.Name = "Çağrılar";
+            this.Çağrılar.Text = "Çağrılar";
+            // 
+            // ribbonPageGroup14
+            // 
+            this.ribbonPageGroup14.ItemLinks.Add(this.btnAktifCagrılar);
+            this.ribbonPageGroup14.ItemLinks.Add(this.btnPasifCagrılar);
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
+            // 
             // ribbonPage6
             // 
             this.ribbonPage6.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -472,6 +508,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
@@ -530,6 +567,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarButtonItem btnAktifCagrılar;
+        private DevExpress.XtraBars.BarButtonItem btnPasifCagrılar;
+        private DevExpress.XtraBars.Ribbon.RibbonPage Çağrılar;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
     }
 }
 

@@ -18,6 +18,8 @@ namespace is_takip_proje.Entity
         public TblFirmalar()
         {
             this.TblCagrilar = new HashSet<TblCagrilar>();
+            this.TblMesajlar = new HashSet<TblMesajlar>();
+            this.TblMesajlar1 = new HashSet<TblMesajlar>();
         }
     
         public int ID { get; set; }
@@ -29,8 +31,14 @@ namespace is_takip_proje.Entity
         public string ilce { get; set; }
         public string il { get; set; }
         public string Adres { get; set; }
+        public string Sifre { get; set; }
+        public string Gorsel { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TblCagrilar> TblCagrilar { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TblMesajlar> TblMesajlar { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TblMesajlar> TblMesajlar1 { get; set; }
     }
 }
