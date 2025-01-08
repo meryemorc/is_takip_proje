@@ -92,9 +92,23 @@ namespace is_takip_proje
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            Formlar.FrmDepartmanEkle frm = new Formlar.FrmDepartmanEkle();
+            frm.Show();
+        }
 
+        private void btnPersonelEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.FrmPersonelEkle frm = new Formlar.FrmPersonelEkle();
+            frm.Show();
+        }
+
+        private void BtnFirmaListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.FrmFirmalar frm = new Formlar.FrmFirmalar();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

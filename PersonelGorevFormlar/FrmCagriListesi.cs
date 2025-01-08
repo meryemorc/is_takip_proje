@@ -18,9 +18,12 @@ namespace is_takip_proje.PersonelGorevFormlar
             InitializeComponent();
         }
         DbisTakipEntities db = new DbisTakipEntities();
-       
+        public string mail2;
         private void FrmCagriListesi_Load(object sender, EventArgs e)
         {
+
+            var personelid = db.TblPersonel.Where(x => x.Mail == mail2).Select(y => y.ID).FirstOrDefault();
+            
             gridControl1.DataSource = (from x in db.TblCagrilar
                                        select new
                                        {
@@ -29,10 +32,13 @@ namespace is_takip_proje.PersonelGorevFormlar
                                            x.TblFirmalar.Telefon,
                                            x.TblFirmalar.Mail,
                                            x.Aciklama,
+                                           x.CagriPersonel,
                                            x.Durum
 
-                                       }).Where(y => y.Durum == true).ToList();
+                                       }).Where(y => y.Durum == true && y.CagriPersonel==personelid).ToList();
             gridView1.Columns["Durum"].Visible = false;
+            gridView1.Columns["CagriPersonel"].Visible = false;
+
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)

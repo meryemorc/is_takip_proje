@@ -29,7 +29,7 @@ namespace is_takip_proje.Formlar
         {
             TblGorevler t = new TblGorevler();
             t.Aciklama =txtAciklama.Text;
-            t.Durum = true;
+            t.Durum = checkEdit1.Checked;
             t.GorevAlan = int.Parse(lookUpEdit1.EditValue.ToString());
             t.Tarih = DateTime.Parse(txtTarih.Text);
             t.GorevVeren = 1;

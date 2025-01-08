@@ -28,7 +28,6 @@ namespace is_takip_proje.Formlar
                                x.Ad,
                                x.Soyad,
                                x.Mail,
-                               x.Gorsel,
                                Departman=x.TblDepartmanlar.Ad,
                                x.Durum
                            };
@@ -63,7 +62,6 @@ namespace is_takip_proje.Formlar
             t.Ad = txtAd.Text;
             t.Soyad = txtSoyad.Text;
             t.Mail = txtMail.Text;
-            t.Gorsel = txtGorsel.Text;
             t.Departman =int.Parse( lookUpEdit1.EditValue.ToString());
             db.TblPersonel.Add(t);
             db.SaveChanges();
@@ -100,7 +98,6 @@ namespace is_takip_proje.Formlar
             deger.Ad =txtAd.Text;
             deger.Soyad = txtSoyad.Text;
             deger.Mail = txtMail.Text;
-            deger.Gorsel = txtGorsel.Text;
             deger.Departman = int.Parse(lookUpEdit1.EditValue.ToString());
             db.SaveChanges();
             XtraMessageBox.Show("Personel Başarıyla Güncellendi...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Question);

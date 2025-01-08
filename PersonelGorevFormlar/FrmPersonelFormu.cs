@@ -17,13 +17,14 @@ namespace is_takip_proje.PersonelGorevFormlar
             InitializeComponent();
         }
 
-        
 
+        public string mail;
         private void BtnAktifGorevler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
             PersonelGorevFormlar.FrmAktifGörevler frm = new PersonelGorevFormlar.FrmAktifGörevler();
             frm.MdiParent = this;
+            frm.mail2 = mail;
             frm.Show();
         }
 
@@ -31,6 +32,7 @@ namespace is_takip_proje.PersonelGorevFormlar
         {
             PersonelGorevFormlar.FrmPasifGorevler frm = new PersonelGorevFormlar.FrmPasifGorevler();
             frm.MdiParent = this;
+            frm.mail2 = mail;
             frm.Show();
         }
 
@@ -38,7 +40,14 @@ namespace is_takip_proje.PersonelGorevFormlar
         {
             PersonelGorevFormlar.FrmCagriListesi frm = new PersonelGorevFormlar.FrmCagriListesi();
             frm.MdiParent = this;
+            frm.mail2 = mail;
             frm.Show();
+        }
+
+        private void FrmPersonelFormu_Load(object sender, EventArgs e)
+        {
+            //this.Text = mail.ToString();
+            this.Text = "Personel Paneli";
         }
     }
 }

@@ -30,6 +30,7 @@ namespace is_takip_proje.Formlar
                                 x.TblFirmalar.Telefon,
                                 x.Konu,
                                 x.Aciklama,
+                                Personel = x.TblPersonel.Ad,
                                 x.Durum
                             }
                             ).Where(y => y.Durum == false).ToList();

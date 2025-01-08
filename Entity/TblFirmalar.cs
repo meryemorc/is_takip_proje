@@ -27,11 +27,10 @@ namespace is_takip_proje.Entity
         public string Yetkili { get; set; }
         public string Telefon { get; set; }
         public string Mail { get; set; }
+        public string Sifre { get; set; }
         public string Sektor { get; set; }
-        public string ilce { get; set; }
         public string il { get; set; }
         public string Adres { get; set; }
-        public string Sifre { get; set; }
         public string Gorsel { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

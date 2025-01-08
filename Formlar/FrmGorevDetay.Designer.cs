@@ -50,10 +50,10 @@
             // 
             this.gridControl1.DataSource = this.bindingSource1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(24, 24, 24, 24);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(24);
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(24, 24, 24, 24);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(24);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(871, 450);
             this.gridControl1.TabIndex = 0;
@@ -73,6 +73,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsEditForm.PopupEditFormWidth = 4765;
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
             // gridColumn1
@@ -137,14 +138,14 @@
             // görevDetaySilToolStripMenuItem
             // 
             this.görevDetaySilToolStripMenuItem.Name = "görevDetaySilToolStripMenuItem";
-            this.görevDetaySilToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.görevDetaySilToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.görevDetaySilToolStripMenuItem.Text = "Görev Detay Sil";
             this.görevDetaySilToolStripMenuItem.Click += new System.EventHandler(this.görevDetaySilToolStripMenuItem_Click);
             // 
             // kapatToolStripMenuItem
             // 
             this.kapatToolStripMenuItem.Name = "kapatToolStripMenuItem";
-            this.kapatToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.kapatToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.kapatToolStripMenuItem.Text = "Kapat";
             // 
             // FrmGorevDetay

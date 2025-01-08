@@ -33,11 +33,11 @@
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.BtnAktifGorevler = new DevExpress.XtraBars.BarButtonItem();
             this.BtnPasifGorevler = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnCagriListesi = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BtnCagriListesi = new DevExpress.XtraBars.BarButtonItem();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -73,13 +73,21 @@
             this.BtnPasifGorevler.Name = "BtnPasifGorevler";
             this.BtnPasifGorevler.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPasifGorevler_ItemClick);
             // 
+            // BtnCagriListesi
+            // 
+            this.BtnCagriListesi.Caption = "Çağrı Listesi";
+            this.BtnCagriListesi.Id = 3;
+            this.BtnCagriListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnCagriListesi.ImageOptions.LargeImage")));
+            this.BtnCagriListesi.Name = "BtnCagriListesi";
+            this.BtnCagriListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnCagriListesi_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
             this.ribbonPageGroup2});
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
+            this.ribbonPage1.Text = "Personel";
             // 
             // ribbonPageGroup1
             // 
@@ -87,22 +95,14 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.BtnPasifGorevler);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
-            // xtraTabbedMdiManager1
-            // 
-            this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.BtnCagriListesi);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
-            // BtnCagriListesi
+            // xtraTabbedMdiManager1
             // 
-            this.BtnCagriListesi.Caption = "Çağrı Listesi";
-            this.BtnCagriListesi.Id = 3;
-            this.BtnCagriListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.BtnCagriListesi.Name = "BtnCagriListesi";
-            this.BtnCagriListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnCagriListesi_ItemClick);
+            this.xtraTabbedMdiManager1.MdiParent = this;
             // 
             // FrmPersonelFormu
             // 
@@ -112,7 +112,9 @@
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "FrmPersonelFormu";
-            this.Text = "FrmPersonelFormu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Personel Formu";
+            this.Load += new System.EventHandler(this.FrmPersonelFormu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
