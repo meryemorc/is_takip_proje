@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace is_takip_proje
 {
@@ -109,6 +110,37 @@ namespace is_takip_proje
             Formlar.FrmFirmalar frm = new Formlar.FrmFirmalar();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        
+
+        private void btnKurlar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.FrmKurlar frm = new Formlar.FrmKurlar();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnYardım_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraMessageBox.Show("Projede alacağınız her türlü hata için test@gmail.com mail adresi üzerinden bize ulaşabilirsiniz.\nBuna ek olarak +90 (123) (45-67) numaralı telefondan direkt arayarak veya Whatsapp uygulaması üzerinden sorularınızı bize iletirseniz en hızlı şekilde dönüş sağlayıp probleminizi çözmeniz için yardımcı olabiliriz.", 
+            "Bilgi", 
+            MessageBoxButtons.OK, 
+            MessageBoxIcon.Information);
+
+
+        }
+
+        private void btnYoutube_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.FrmYoutube frm = new Formlar.FrmYoutube();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnHesapMakinesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("calc.exe");
         }
     }
 }
